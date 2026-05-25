@@ -1,0 +1,7 @@
+{
+  "name": "@perpetual-futures/ws",
+  "private": true,
+  "scripts": {
+    "dev": "go run ./cmd"
+  }
+}

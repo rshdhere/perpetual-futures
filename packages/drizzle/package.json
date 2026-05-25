@@ -1,9 +1,10 @@
 {
-  "name": "drizzle",
+  "name": "@perpetual-futures/drizzle",
   "module": "index.ts",
   "type": "module",
   "private": true,
   "devDependencies": {
+    "@perpetual-futures/typescript-config": "workspace:*",
     "@types/bun": "latest"
   },
   "peerDependencies": {

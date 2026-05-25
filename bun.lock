@@ -29,14 +29,14 @@
       "name": "web",
       "version": "0.1.0",
       "dependencies": {
-        "@repo/ui": "*",
+        "@perpetual-futures/ui": "workspace:*",
         "next": "16.2.0",
         "react": "^19.2.0",
         "react-dom": "^19.2.0",
       },
       "devDependencies": {
-        "@repo/eslint-config": "*",
-        "@repo/typescript-config": "*",
+        "@perpetual-futures/eslint-config": "workspace:*",
+        "@perpetual-futures/typescript-config": "workspace:*",
         "@types/node": "^22.15.3",
         "@types/react": "19.2.2",
         "@types/react-dom": "19.2.2",
@@ -45,8 +45,9 @@
       },
     },
     "packages/config": {
-      "name": "config",
+      "name": "@perpetual-futures/config",
       "devDependencies": {
+        "@perpetual-futures/typescript-config": "workspace:*",
         "@types/bun": "latest",
       },
       "peerDependencies": {
@@ -54,8 +55,9 @@
       },
     },
     "packages/controllers": {
-      "name": "controllers",
+      "name": "@perpetual-futures/controllers",
       "devDependencies": {
+        "@perpetual-futures/typescript-config": "workspace:*",
         "@types/bun": "latest",
       },
       "peerDependencies": {
@@ -63,8 +65,9 @@
       },
     },
     "packages/drizzle": {
-      "name": "drizzle",
+      "name": "@perpetual-futures/drizzle",
       "devDependencies": {
+        "@perpetual-futures/typescript-config": "workspace:*",
         "@types/bun": "latest",
       },
       "peerDependencies": {
@@ -72,8 +75,9 @@
       },
     },
     "packages/handlers": {
-      "name": "handlers",
+      "name": "@perpetual-futures/handlers",
       "devDependencies": {
+        "@perpetual-futures/typescript-config": "workspace:*",
         "@types/bun": "latest",
       },
       "peerDependencies": {
@@ -81,8 +85,9 @@
       },
     },
     "packages/kafka": {
-      "name": "kafka",
+      "name": "@perpetual-futures/kafka",
       "devDependencies": {
+        "@perpetual-futures/typescript-config": "workspace:*",
         "@types/bun": "latest",
       },
       "peerDependencies": {
@@ -90,8 +95,9 @@
       },
     },
     "packages/services": {
-      "name": "services",
+      "name": "@perpetual-futures/services",
       "devDependencies": {
+        "@perpetual-futures/typescript-config": "workspace:*",
         "@types/bun": "latest",
       },
       "peerDependencies": {
@@ -99,8 +105,9 @@
       },
     },
     "packages/types": {
-      "name": "types",
+      "name": "@perpetual-futures/types",
       "devDependencies": {
+        "@perpetual-futures/typescript-config": "workspace:*",
         "@types/bun": "latest",
       },
       "peerDependencies": {
@@ -108,15 +115,15 @@
       },
     },
     "packages/ui": {
-      "name": "@repo/ui",
+      "name": "@perpetual-futures/ui",
       "version": "0.0.0",
       "dependencies": {
         "react": "^19.2.0",
         "react-dom": "^19.2.0",
       },
       "devDependencies": {
-        "@repo/eslint-config": "*",
-        "@repo/typescript-config": "*",
+        "@perpetual-futures/eslint-config": "workspace:*",
+        "@perpetual-futures/typescript-config": "workspace:*",
         "@types/node": "^22.15.3",
         "@types/react": "19.2.2",
         "@types/react-dom": "19.2.2",
@@ -127,6 +134,7 @@
     "packages/validators": {
       "name": "validators",
       "devDependencies": {
+        "@perpetual-futures/typescript-config": "workspace:*",
         "@types/bun": "latest",
       },
       "peerDependencies": {
@@ -134,7 +142,7 @@
       },
     },
     "tooling/eslint-config": {
-      "name": "@repo/eslint-config",
+      "name": "@perpetual-futures/eslint-config",
       "version": "0.0.0",
       "devDependencies": {
         "@eslint/js": "^9.39.1",
@@ -151,7 +159,7 @@
       },
     },
     "tooling/typescript-config": {
-      "name": "@repo/typescript-config",
+      "name": "@perpetual-futures/typescript-config",
       "version": "0.0.0",
     },
   },
@@ -262,13 +270,27 @@
 
     "@nodelib/fs.walk": ["@nodelib/fs.walk@1.2.8", "", { "dependencies": { "@nodelib/fs.scandir": "2.1.5", "fastq": "^1.6.0" } }, "sha512-oGB+UxlgWcgQkgwo8GcEGwemoTFt3FIO9ababBmaGwXIoBKZ+GTy0pP185beGg7Llih/NSHSV2XAs1lnznocSg=="],
 
+    "@perpetual-futures/config": ["@perpetual-futures/config@workspace:packages/config"],
+
+    "@perpetual-futures/controllers": ["@perpetual-futures/controllers@workspace:packages/controllers"],
+
+    "@perpetual-futures/drizzle": ["@perpetual-futures/drizzle@workspace:packages/drizzle"],
+
+    "@perpetual-futures/eslint-config": ["@perpetual-futures/eslint-config@workspace:tooling/eslint-config"],
+
+    "@perpetual-futures/handlers": ["@perpetual-futures/handlers@workspace:packages/handlers"],
+
+    "@perpetual-futures/kafka": ["@perpetual-futures/kafka@workspace:packages/kafka"],
+
+    "@perpetual-futures/services": ["@perpetual-futures/services@workspace:packages/services"],
+
+    "@perpetual-futures/types": ["@perpetual-futures/types@workspace:packages/types"],
+
+    "@perpetual-futures/typescript-config": ["@perpetual-futures/typescript-config@workspace:tooling/typescript-config"],
+
+    "@perpetual-futures/ui": ["@perpetual-futures/ui@workspace:packages/ui"],
+
     "@pkgr/core": ["@pkgr/core@0.2.9", "", {}, "sha512-QNqXyfVS2wm9hweSYD2O7F0G06uurj9kZ96TRQE5Y9hU7+tgdZwIkbAKc5Ocy1HxEY2kuDQa6cQ1WRs/O5LFKA=="],
-
-    "@repo/eslint-config": ["@repo/eslint-config@workspace:tooling/eslint-config"],
-
-    "@repo/typescript-config": ["@repo/typescript-config@workspace:tooling/typescript-config"],
-
-    "@repo/ui": ["@repo/ui@workspace:packages/ui"],
 
     "@swc/helpers": ["@swc/helpers@0.5.15", "", { "dependencies": { "tslib": "^2.8.0" } }, "sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g=="],
 
@@ -382,10 +404,6 @@
 
     "concat-map": ["concat-map@0.0.1", "", {}, "sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg=="],
 
-    "config": ["config@workspace:packages/config"],
-
-    "controllers": ["controllers@workspace:packages/controllers"],
-
     "cross-spawn": ["cross-spawn@7.0.6", "", { "dependencies": { "path-key": "^3.1.0", "shebang-command": "^2.0.0", "which": "^2.0.1" } }, "sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA=="],
 
     "csstype": ["csstype@3.2.3", "", {}, "sha512-z1HGKcYy2xA8AGQfwrn0PAy+PB7X/GSj3UVJW9qKyn43xWa+gl5nXmU4qqLMRzWVLFC8KusUX8T/0kCiOYpAIQ=="],
@@ -409,8 +427,6 @@
     "doctrine": ["doctrine@2.1.0", "", { "dependencies": { "esutils": "^2.0.2" } }, "sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw=="],
 
     "dotenv": ["dotenv@16.0.3", "", {}, "sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ=="],
-
-    "drizzle": ["drizzle@workspace:packages/drizzle"],
 
     "dunder-proto": ["dunder-proto@1.0.1", "", { "dependencies": { "call-bind-apply-helpers": "^1.0.1", "es-errors": "^1.3.0", "gopd": "^1.2.0" } }, "sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A=="],
 
@@ -516,8 +532,6 @@
 
     "gopd": ["gopd@1.2.0", "", {}, "sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg=="],
 
-    "handlers": ["handlers@workspace:packages/handlers"],
-
     "has-bigints": ["has-bigints@1.1.0", "", {}, "sha512-R3pbpkcIqv2Pm3dUwgjclDRVmWpTJW2DcMzcIhEXEx1oh/CEMObMm3KLmRJOdvhM7o4uQBnwr8pzRK2sJWIqfg=="],
 
     "has-flag": ["has-flag@4.0.0", "", {}, "sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ=="],
@@ -611,8 +625,6 @@
     "json-stable-stringify-without-jsonify": ["json-stable-stringify-without-jsonify@1.0.1", "", {}, "sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw=="],
 
     "jsx-ast-utils": ["jsx-ast-utils@3.3.5", "", { "dependencies": { "array-includes": "^3.1.6", "array.prototype.flat": "^1.3.1", "object.assign": "^4.1.4", "object.values": "^1.1.6" } }, "sha512-ZZow9HBI5O6EPgSJLUb8n2NKgmVWTwCvHGwFuJlMjvLFqlGG6pjirPhtdsseaLZjSibD8eegzmYpUZwoIlj2cQ=="],
-
-    "kafka": ["kafka@workspace:packages/kafka"],
 
     "keyv": ["keyv@4.5.4", "", { "dependencies": { "json-buffer": "3.0.1" } }, "sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw=="],
 
@@ -738,8 +750,6 @@
 
     "server": ["server@workspace:apps/server"],
 
-    "services": ["services@workspace:packages/services"],
-
     "set-function-length": ["set-function-length@1.2.2", "", { "dependencies": { "define-data-property": "^1.1.4", "es-errors": "^1.3.0", "function-bind": "^1.1.2", "get-intrinsic": "^1.2.4", "gopd": "^1.0.1", "has-property-descriptors": "^1.0.2" } }, "sha512-pgRc4hJ4/sNjWCSS9AmnS40x3bNMDTknHgL5UaMBTMyJnU90EgWh1Rz+MC9eFu4BuN/UwZjKQuY/1v3rM7HMfg=="],
 
     "set-function-name": ["set-function-name@2.0.2", "", { "dependencies": { "define-data-property": "^1.1.4", "es-errors": "^1.3.0", "functions-have-names": "^1.2.3", "has-property-descriptors": "^1.0.2" } }, "sha512-7PGFlmtwsEADb0WYyvCMa1t+yke6daIG4Wirafur5kcf+MhUnPms1UeR0CKQdTZD81yESwMHbtn+TR+dMviakQ=="],
@@ -815,8 +825,6 @@
     "typed-array-byte-offset": ["typed-array-byte-offset@1.0.4", "", { "dependencies": { "available-typed-arrays": "^1.0.7", "call-bind": "^1.0.8", "for-each": "^0.3.3", "gopd": "^1.2.0", "has-proto": "^1.2.0", "is-typed-array": "^1.1.15", "reflect.getprototypeof": "^1.0.9" } }, "sha512-bTlAFB/FBYMcuX81gbL4OcpH5PmlFHqlCCpAl8AlEzMz5k53oNDvN8p1PNOWLEmI2x4orp3raOFB51tv9X+MFQ=="],
 
     "typed-array-length": ["typed-array-length@1.0.7", "", { "dependencies": { "call-bind": "^1.0.7", "for-each": "^0.3.3", "gopd": "^1.0.1", "is-typed-array": "^1.1.13", "possible-typed-array-names": "^1.0.0", "reflect.getprototypeof": "^1.0.6" } }, "sha512-3KS2b+kL7fsuk/eJZ7EQdnEmQoaho/r6KUef7hxvltNA5DR8NAUM+8wJMbJyZ4G9/7i3v5zPBIMN5aybAh2/Jg=="],
-
-    "types": ["types@workspace:packages/types"],
 
     "typescript": ["typescript@5.9.2", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A=="],
 

@@ -1,5 +1,5 @@
 {
-  "name": "@perpetual-futures/ws",
+  "name": "@perpetual-futures/stream",
   "private": true,
   "scripts": {
     "dev": "go run ./cmd"

@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "@perpetual-futures/server",
   "module": "index.ts",
   "type": "module",
   "private": true,

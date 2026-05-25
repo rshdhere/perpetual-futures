@@ -1,9 +1,10 @@
 {
-  "name": "controllers",
+  "name": "@perpetual-futures/controllers",
   "module": "index.ts",
   "type": "module",
   "private": true,
   "devDependencies": {
+    "@perpetual-futures/typescript-config": "workspace:*",
     "@types/bun": "latest"
   },
   "peerDependencies": {

@@ -1,6 +1,10 @@
 {
   "extends": "@perpetual-futures/typescript-config/nextjs.json",
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    },
     "plugins": [
       {
         "name": "next",
